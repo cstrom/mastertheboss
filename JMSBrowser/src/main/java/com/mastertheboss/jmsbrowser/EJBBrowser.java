@@ -147,8 +147,8 @@ public class EJBBrowser {
         if (mode.equals("domain")) {
             req.get(ClientConstants.OP_ADDR).add("profile", properties.getProperty("profile"));
         }
-        req.get(ClientConstants.OP_ADDR).add("subsystem", "messaging");
-        req.get(ClientConstants.OP_ADDR).add("hornetq-server", "default");
+        req.get(ClientConstants.OP_ADDR).add("subsystem", "messaging-activemq");
+        req.get(ClientConstants.OP_ADDR).add("server", "default");
 
         ModelControllerClient client = null;
         List<QueueDTO> listQueues = new ArrayList();
